@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover free AI tools for writing, images, video, coding, research, and productivity. Compare free plans and learn how to use each tool.">
+  <title>Free AI Tool — Discover useful AI tools</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Free AI Tool home"><span class="brand-mark">✦</span> Free<span>AI</span>Tool</a>
+    <nav aria-label="Main navigation">
+      <a href="#tools">Explore tools</a>
+      <a href="#categories">Categories</a>
+      <a href="#news">News</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="submit-link" href="mailto:hello@free-ai-tool.example?subject=Suggest%20an%20AI%20tool">Suggest a tool ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="live-dot"></span> YOUR AI TOOL DIRECTORY</div>
+      <h1>Find the right AI tool.<br><span>Get more done.</span></h1>
+      <p class="hero-copy">Explore useful AI tools, understand their free plans, and learn how to get started — all in one place.</p>
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="searchInput" type="search" placeholder="Search tools, tasks, or categories…" aria-label="Search AI tools">
+        <kbd>SEARCH</kbd>
+      </div>
+      <div class="hero-tags"><span>✦ Curated discoveries</span><span>↗ Official links</span><span>◎ Beginner-friendly guides</span></div>
+      <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+    </section>
+
+    <section class="content-section" id="categories">
+      <div class="section-heading">
+        <div><p class="section-kicker">BROWSE BY NEED</p><h2>What do you want to do?</h2></div>
+        <p class="muted">Choose a category to narrow your search.</p>
+      </div>
+      <div class="category-grid" id="categoryGrid">
+        <button class="category-card active" data-category="All"><span class="category-icon all-icon">✦</span><span><strong>All tools</strong><small>Explore everything</small></span><span class="arrow">↗</span></button>
+        <button class="category-card" data-category="Writing"><span class="category-icon writing-icon">Aa</span><span><strong>Writing</strong><small>Write and rewrite</small></span><span class="arrow">↗</span></button>
+        <button class="category-card" data-category="Images"><span class="category-icon image-icon">▧</span><span><strong>Images & design</strong><small>Create visuals</small></span><span class="arrow">↗</span></button>
+        <button class="category-card" data-category="Video"><span class="category-icon video-icon">▶</span><span><strong>Video & audio</strong><small>Edit and generate</small></span><span class="arrow">↗</span></button>
+        <button class="category-card" data-category="Coding"><span class="category-icon code-icon">{ }</span><span><strong>Coding</strong><small>Build and debug</small></span><span class="arrow">↗</span></button>
+        <button class="category-card" data-category="Productivity"><span class="category-icon productivity-icon">◷</span><span><strong>Productivity</strong><small>Research and organise</small></span><span class="arrow">↗</span></button>
+      </div>
+    </section>
+
+    <section class="content-section tools-section" id="tools">
+      <div class="section-heading">
+        <div><p class="section-kicker">THE DIRECTORY</p><h2>Explore AI tools <span class="count-pill" id="toolCount">13</span></h2></div>
+        <label class="sort-label">Sort by
+          <select id="sortSelect" aria-label="Sort tools"><option value="featured">Featured</option><option value="name">Name A–Z</option></select>
+        </label>
+      </div>
+      <div class="filter-row"><span id="activeFilter">All tools</span><button id="clearFilters" type="button">Clear filters ×</button></div>
+      <div class="tool-grid" id="toolGrid"></div>
+      <div class="empty-state" id="emptyState" hidden><span>⌕</span><h3>No tools found</h3><p>Try a different search or category.</p><button id="resetSearch">Reset search</button></div>
+      <p class="disclaimer">Free-plan availability and limits can change. Check each tool’s official website before relying on a feature.</p>
+    </section>
+
+    <section class="content-section news-section" id="news">
+      <div class="section-heading">
+        <div><p class="section-kicker">THIS MONTH IN AI</p><h2>Latest tool news <span class="count-pill" id="newsMonth"></span></h2></div>
+        <p class="muted">Pick a tool to see headlines published this month.</p>
+      </div>
+      <div class="news-picker" id="newsPicker" role="tablist" aria-label="Choose a tool for news"></div>
+      <div class="news-panel" id="newsPanel" aria-live="polite"></div>
+      <p class="disclaimer">Headlines are gathered automatically from Google News and link to the original publishers. Free AI Tool is not responsible for third-party content.</p>
+    </section>
+
+    <section class="learn-banner" id="about">
+      <div class="learn-icon">✧</div><div><p class="section-kicker">START SMART</p><h2>New to AI? Start with a simple prompt.</h2><p>Tell an AI tool what you want, add context, and explain the format you need. Then review the result before using it.</p></div><a href="#tools" class="banner-button">Explore tools <span>→</span></a>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">✦</span> Free<span>AI</span>Tool</a><p>Helping everyone discover useful AI.</p><div><a href="#tools">Directory</a><a href="#news">News</a><a href="#about">About</a></div><small>Independent directory. Tool names belong to their respective owners.</small></footer>
+
+  <dialog id="toolDialog" class="tool-dialog">
+    <button class="dialog-close" id="dialogClose" aria-label="Close details">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+  <script src="script.js"></script>
+</body>
+</html>
